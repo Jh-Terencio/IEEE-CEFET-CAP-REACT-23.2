@@ -1,9 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
 
 function App() {
-  return (
-    <p>Hello world</p>
+  const [inputText, setInputText] = useState("");
+
+  function handleChange(event) {
+    setInputText(event.target.value);
+  }
+
+  useEffect(() => {
+    //efeito colateral
+    console.log(inputText);
+  }, [inputText])
+
+  return ( 
+    <>
+      <p>{inputText}</p>
+      <input type="text" value={inputText} onChange={handleChange}/>
+    </>  
   );
 }
 
