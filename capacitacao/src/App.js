@@ -1,8 +1,12 @@
-import './App.css';
+import Button from './components/Button.js';
 
 function App() {
   return (
-    <p>Hellor world</p>
+    <>
+      <Button text="olá"> aqui!! </Button>
+      <Button text="ramo"></Button>
+      <Button text="ieee"></Button>
+    </>
   );
 }
 
